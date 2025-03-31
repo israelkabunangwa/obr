@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body >
+    <section class="adminBody">
+        <section class="adminHeader">
+            <div class="adminNavBar">
+                <div class="adminLogo"> <h1>OBR</h1></div>
+                <div class="adminMenu">
+                    <h2>Espace Admin</h2>
+                    <input type="text" placeholder="search">
+                </div>
+            </div>
+        </section>
+        <section class="allData">
+            <div class="menuData">
+                <h2>Menu</h2>
+                <ul>
+                    <li class="menuDataActive menuItem" id="actualite">Actualites</li>
+                    <li class="menuItem" id="evenement">Evenements</li>
+                    <li class="menuItem" id="Communique">Communiques</li>
+                    <li class="menuItem" id="Opportunite">Opportunites</li>
+                </ul>
+            </div>
+            <div class="dataDescription">
+                <div class="actualite menuItemDescription">
+                    <div class="add"><button>ADD ARTICLES</button></div>
+                    <div class="menuItemDescriptionTitle"><h2>TOUTES LES ACTUALITES</h2></div>
+                    <div id="articles"></div>
+                </div>
+                <div class="evenement menuItemDescription">
+                    <div class="add"><button>ADD ARTICLES</button></div>
+                    <div class="menuItemDescriptionTitle"><h2>TOUS LES EVENEMENTS</h2></div>
+                    <div id="articles"></div>
+                </div>
+                <div class="Communique menuItemDescription">
+                    <div class="add"><button>ADD ARTICLES</button></div>
+                    <div class="menuItemDescriptionTitle"><h2>TOUS LES COMMUNIQUES</h2></div>
+                </div>
+                <div class="Opportunite menuItemDescription">
+                    <div class="add"><button>ADD ARTICLES</button></div>
+                    <div class="menuItemDescriptionTitle"><h2>TOUTES LES OPPORTUNITES</h2></div>
+                    <div id="articles"></div>
+                </div>
+            </div>
+           
+        </section>
+      
+        <div class="form">
+            <div class="formContainer">
+                <form action="" id="articleForm">
+                    <i class="fa fa-times-circle" aria-hidden="true"></i>
+                    <input type="text" id="image" name="image" placeholder="image">
+                    <input type="text" id="titre" placeholder="grand titre">
+                    <textarea name="" id="contenu" placeholder="contenu"></textarea>
+                    <input type="date" id="date" placeholder="date">
+                    <button type="submit">publier</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="form">
+            <div class="formContainer">
+                <form action="" id="articleFormEvent">
+                    <i class="fa fa-times-circle" aria-hidden="true"></i>
+                    <input type="text" id="imageEvent" name="image" placeholder="image">
+                    <input type="text" id="titreEvent" placeholder="grand titre">
+                    <textarea name="" id="contenuEvent" placeholder="contenu"></textarea>
+                    <input type="date" id="dateEvent" placeholder="date">
+                    <button type="submit">publier</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <script src="logic.js" type="module"></script>
+    <script src="admin.js" defer></script>
+</body>
+</html>

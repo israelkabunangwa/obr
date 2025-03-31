@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<style>
+    .pageActualiteItem{
+        display: flex;
+        width: 100%;
+        margin-top: 2rem;
+    }
+    .pageActualiteItemImage{
+        width: 50%;
+    }
+    .pageActualiteItemImage img{
+        width: 100%;
+    }
+    .pageActualiteItemPara{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        margin-left: 2rem;
+    }
+    .pageActualiteItemPara p{
+        line-height: 1.5rem;
+    }
+</style>
+<body>
+    <section class="pageActualiteHeader">
+        <div class="navBar"></div>
+        <div class="pageActualiteHeaderDescription">
+            <div>
+                <h2>ACTUALITE</h2>
+            </div>
+        </div>
+    </section>
+    <section class="pageActualiteAllItems">
+        <div class="pageActualiteAllItemContainer">
+        </div>
+    </section>
+    <section class="footer"></section>
+   
+    <script>
+        function afficherItems(){
+            const articles = JSON.parse(localStorage.getItem('articles')) || [];
+            const pageContainerAllItems = document.querySelector('.pageActualiteAllItemContainer')
+            articles.forEach(article => {
+              
+            const articleElementPage=`
+                <div class="pageActualiteItem">
+                    <div class="pageActualiteItemImage"><img src="${article.image}" alt=""></div>
+                    <div class="pageActualiteItemPara"><p>${article.contenu}</p></div>
+                </div>
+             `
+             pageContainerAllItems.insertAdjacentHTML('afterbegin', articleElementPage)
+                });
+        }
+        afficherItems()
+    </script>
+    <script src="logic.js" type="module"></script>
+
+</body>
+</html>

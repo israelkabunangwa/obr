@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", serif;
+}
+
+:root{
+    --primary-color: rgb(204, 13, 13);
+    
+}
+.adminBody{
+    background: rgb(233, 228, 228);
+    height: 100vh;
+}
+.adminHeader{
+    height: 10%;
+  
+}
+.adminNavBar{
+    display: flex;
+    width: 100%;
+    padding:1rem 2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 0.5rem;
+    background-color: white;
+}
+.adminLogo{
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
+.adminLogo h1{
+    color: var(--primary-color);
+    font-weight:900;
+}
+.adminMenu{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+.adminMenu input{
+    padding: 0rem 0.5rem;
+    border-radius: 0.5rem;
+    outline: none;
+    border: 1px solid gray;
+}
+.allData{
+    padding: 1rem;
+    display: flex;
+    height: 90%;
+}
+.menuData{
+    width: 20%;
+    background-color: white;
+    height: 100%;
+}
+.dataDescription{
+    width: 80%;
+    background-color: white;
+    margin-left: 1rem;
+    overflow-y: scroll;
+}
+.menuData h2{
+    margin: 1rem;
+}
+.menuData ul{
+    margin-top: 2rem;
+}
+.menuData ul li{
+    list-style: none;
+    
+    padding:1rem;
+}
+.menuData ul li:hover{
+    background:rgb(221, 124, 124);
+    color: white;
+    cursor: pointer;
+}
+.menuDataActive{
+    border-right: 3px solid var(--primary-color);
+    color:var(--primary-color);
+}
+.add{
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: right;
+}
+.add button{
+    border: 0;
+    outline: none;
+    background: var(--primary-color);
+    padding: 0.5rem;
+    color: white;
+    font-weight: bold;
+    border-radius: 0.3rem;
+}
+
+.allData #articles{
+    padding: 1rem;
+}
+.form{
+    display: none;
+}
+.formContainer{
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form #articleForm{
+    background-color:rgb(231, 218, 218);
+    width:30%;
+    padding: 1rem;
+    position: relative;
+}
+
+.form #articleForm input{
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+    padding:0.5rem;
+}
+.form #articleForm textarea{
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+    padding:0.5rem 0.5rem 2rem 0.5rem;
+}
+.form #articleForm button{
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    outline:none;
+    border: 0;
+    background: var(--primary-color);
+}
+.form #articleForm i{
+    position:absolute;
+    right: -1rem;
+    top: -1rem;
+    font-size: 1.5rem;
+    color:red;
+}
+
+#articles{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
+}
+.articlesItem{
+    background-color: rgb(224, 216, 216);
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.articlesItem h3{
+    margin-top: 1rem;
+}
+.articlesItem p{
+    margin-top: 1rem;
+}
+.articlesItem button{
+    margin-top: 1rem;
+    outline: none;
+    border: 0;
+    padding: 0.5rem;
+    background-color: var(--primary-color);
+    color: white;
+}
+.menuItemDescription{
+    display: none;
+}
+.menuItemDescriptionActive{
+    display: block;
+}
+.menuItemDescriptionTitle{
+    padding: 2rem;
+}

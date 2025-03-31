@@ -1,0 +1,411 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+}
+
+/*===========================GENERALE STYLE=====================*/
+h1{font-size: 4rem;color:var(--secondaryColor);}
+h2{
+    font-size:2rem;
+    
+}
+a{text-decoration: none;color: black;}
+li{list-style: none;}
+img{object-fit: contain;}
+:root{--primaryColor: rgb(204, 13, 13); --secondaryColor:#fff;}
+
+/*==========================HEADER SECTION=====================================*/
+.logo{
+    display: flex;
+    justify-content: space-between;
+    padding:0.5rem 5rem; 
+}
+.logo img{
+    width: 80px;
+    height: 50px;
+}
+.logo .media{
+    display:flex;
+    align-items: center;
+}
+.logo .media i{
+    margin-left: 1rem;
+}
+.menu{
+    padding:0.5rem 5rem;
+}
+.menu nav ul{
+    display: flex;
+    justify-content:space-between;
+    position: relative; 
+}
+.menu nav ul li{
+    position: relative;
+    list-style: none;
+    padding: 0.5rem 1rem;  
+}
+.menu nav ul li:hover > ul{display: block;  }
+.menu nav ul li:hover > a,.menu nav ul li:hover > a i,.menu nav ul li:hover > a b{color: var(--primaryColor);}
+.menu nav ul li ul{
+    position: absolute;
+    left: 0;
+    width:200px;
+    background: var(--secondaryColor);
+    display: none;
+    z-index: 100;
+    top: 2rem; 
+    box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+}
+.menu nav ul li ul li{
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+.menu nav ul li ul li ul{
+    top: 0;
+    left: 200px;
+}
+
+.headerDescription{
+    background-image: url('IMG/bdi_burundi_obr_avril2016_ikiriho (1).jpg');
+    background-size: cover;
+    background-position: center;
+}
+.headerDescriptionContainer{
+    padding: 10rem 5rem 5rem 5rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+.declaration{
+    border: 0;
+    outline: none;
+    background-color: var(--primaryColor);
+    color: white;
+    padding: 0.5rem 1rem;margin-top: 2rem;
+    font-weight: bolder;
+}
+/*==================================ACTUALITE=========================*/
+.actualite{
+    padding: 5rem;
+}
+.actualiteContaiener{
+    display:flex;
+    width: 100%;
+}
+.mainActulite{
+    width: 70%;
+    position: relative;
+}
+.mainActulite .mainActuliteImg img{
+    width: 100%;  
+}
+.mainActuliteImgDescription{
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(17, 16, 16, 0.8), rgb(0, 0, 0));
+}
+.mainActuliteImgDescriptionSubContainer{
+   position: absolute;
+    bottom: 0;
+    padding: 2rem;
+    width: 100%;
+    color: var(--secondaryColor);
+}
+.mainActuliteImgDescriptionSubContainer button{
+    background-color: var(--primaryColor);
+    outline: none;
+    border: 0;
+    padding: 0.5rem 1rem;
+    color: var(--secondaryColor);
+    font-weight: bold;
+}
+.mainActuliteImgDescriptionSubContainer h2{
+    margin-top: 2rem;
+}
+.time-plus{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-top: 2rem;
+}
+.time-plus i{
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    border-radius: 50%;
+    color: var(--primaryColor);
+}
+.secondaryActualite{
+    width: 30%;
+    padding-left: 2rem;
+    
+}
+.secondaryActualiteItem{
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #DCDCDC;
+    color: rgb(37, 36, 36);
+}
+.secondaryActualiteItem:hover a{
+    text-decoration: underline;
+}
+.secondaryActualiteItem span{
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: var(--primaryColor);
+}
+/*==============================*/
+.pageActualiteHeaderDescription{
+    background-image: url('IMG/burundiFlag.jpg');
+    background-size: cover;
+    background-position: center; 
+}
+.pageActualiteHeaderDescription div{
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10rem 5rem 5rem 5rem;
+}
+.pageActualiteHeaderDescription div h2{
+    color: white;
+}
+.pageActualiteAllItems{
+    padding: 5rem;
+}
+
+/*==================================EVENT=========================*/
+.event{
+    background-color: #ebeaea;
+}
+.eventContainer{
+    padding: 5rem;
+    width: 100%;
+}
+.eventContainer h2{
+    text-align: center;
+    color: var(--primaryColor);
+}
+.allEventItems{
+    margin-top: 2rem;
+}
+.eventContainerTitleDescription{
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+.items{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
+    gap: 10px;
+    max-width: 100%;
+    
+}
+.item{
+    position: relative;
+   overflow: hidden;
+   margin: 1rem;
+}
+
+.image-title{
+    position: absolute;
+   bottom: 0;
+   /*background-color: rgba(0,0,0,0.5);*/
+   background: white;
+   padding: 2rem;
+   color: white;
+   font-size: 1.2rem;  
+}
+.image-title h3{
+    color: black;
+}
+.image-title p{
+    display: none;
+    color: black;
+    margin-top: 1rem;
+}
+.item:hover .image-title p{
+    display: block;
+    color: white;
+}
+.item:hover .image-title h3{
+    color: white;
+}
+.item:hover .image-title{
+    top: 0;
+    transition: 3s;
+    animation: animDown 1s;
+    animation-direction: alternate;
+    background-color: var(--primaryColor);
+    display: flex;
+    align-items: center;
+} 
+.item img{
+    width: 100%;
+    display: block;
+    height: 100%;
+    
+}
+@keyframes animDown{
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        
+        transform:translateY(0%)
+    }
+}
+
+/*==================================MISE A JOUR=========================*/
+
+.services{
+    padding: 5rem;
+}
+.allServicesContainer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 2rem;
+}
+.servicesTitle{
+    text-align: center;
+    
+}
+.servicesTitle h2{
+    color: var(--primaryColor);
+}
+.servicesTitle p{
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+.allServiceItem{
+    border: 1px solid var(--primaryColor);
+    margin: 0.5rem;
+    padding: 1rem;
+}
+.allServiceItem:hover{
+    background-color: var(--primaryColor);
+    color: white;
+    cursor: pointer;
+}
+.allServiceItem:hover h3{
+    color: white;
+}
+.allServiceItem h3{
+    font-size: 1.5rem;
+    color:var(--primaryColor);
+}
+.allServiceItem p{
+    margin-top: 1rem;
+}
+
+/*================================FOOTER===================*/
+.footer{
+    padding: 5rem;
+    background: rgb(37, 36, 36);
+   
+}
+.footerContainer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.footerContainerLogo{
+    display:flex;
+}
+.footerContainerLogoImg{
+    width: 35%;
+    border-right: 2px solid var(--primaryColor);
+    display: flex;
+    align-items: center;
+    padding-right: 1rem;
+}
+.footerContainerLogoImg img{
+    width: 100%;
+  
+}
+.footerContainerLogoTitle{
+    width: 65%;
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+}
+.footerContainerLogoTitle h3 span{
+    display: block;
+    color: var(--primaryColor);
+}
+.footerContainerItem{
+    margin: 0.5rem;
+}
+.footerContainerMenu{
+    display: flex;
+    justify-content: center;
+}
+.footerContainerMenu ul li{
+    margin: 0.5rem;
+}
+.footerContainerMenu ul li a:hover{
+    color: var(--primaryColor);
+}
+.footerContainerMenu ul li a{
+    color: rgb(126, 126, 126);
+}
+.footerContainerMenu2{
+    display: flex;
+    justify-content: center;
+}
+.footerContainerMenu2 ul li{
+    margin: 0.5rem;
+}
+.footerContainerMenu2 ul li a:hover{
+   color: var(--primaryColor);
+}
+.footerContainerMenu2 ul li a{
+    color:rgb(126, 126, 126) ;
+}
+.footerContainerMenu2 ul li ul{
+    margin-left: 0.5rem;
+}
+.footerContainerMenu2 ul li ul{
+    margin: 1rem;
+}
+.footerContainerMenu2 ul li ul li a{
+    font-size: 0.9rem;
+    color:rgb(126, 126, 126) ; 
+}
+.newsLetter{
+    margin-top: 1rem;
+}
+.footerContainerNews  h3{
+    color:rgb(126, 126, 126)  ;
+}
+.newsLetter input{
+    border: 0;
+    outline: none;
+    padding: 1rem;
+    width: 100%;
+}
+.newsLetter input::placeholder{
+    color: var(--primaryColor);
+}
+.newsLetter button{
+    display: block;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: var(--primaryColor);
+    color: white;
+    font-weight: bolder;
+}
+.footerMedia{
+    margin-top: 1rem;
+}
+.footerMedia i{
+    margin-right: 1rem;
+    color:rgb(126, 126, 126) ;
+}
